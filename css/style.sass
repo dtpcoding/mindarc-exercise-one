@@ -1,0 +1,82 @@
+@import helpers
+
+/*---- Typography */
+h1
+    font-size: 62px
+    font-weight: bold
+    color: #fff
+
+/*---- Buttons */
+.btn
+    background: #fff
+    border: 3px solid #000
+    +border-radius(25px)
+    font-weight: bold
+    letter-spacing: 3px
+    color: #000
+    margin: 0 auto
+    padding: 7px 20px
+    @media (max-width: $break-large)
+        padding: 7px 15px
+
+.btn:hover
+    background: #000
+    color: #fff
+
+/*---- Jumbotron */
+.jumbotron
+    padding: 0 25px
+    height: 650px
+    width: 100%
+    margin: 0
+    position: relative
+    background: url('../images/1440x650.png') center center no-repeat
+    background-size: cover
+    +border-radius(0)
+    p  
+        color: #fff
+    @media (max-width: $break-large) 
+        height: 60vh
+    @media (max-width: $break-small)
+        height: 50vh
+        background: url('../images/600x600.png') center center no-repeat
+        h1
+            font-size: 46px
+    .jumbotron__content
+        position: relative
+        z-index: 1000
+
+.jumbotron:before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: #000
+    opacity: 0.5
+    z-index: 1
+
+/*---- Main */
+section
+    padding: 40px 0
+    @media (max-width: $break-medium)
+        flex-direction: column
+
+.card
+    width: 30%
+    +box-shadow(0px 0px 3px 1px rgba(0,0,0,0.15))
+    +border-radius(5px)
+    border: 0
+    padding: 25px
+    img 
+        margin: 0 0 25px 0  
+    @media (max-width: $break-medium)
+        width: 100%
+        margin: 0 0 45px 0
+
+.card:last-child
+    margin: 0
+
+.card-body
+    padding: 0
